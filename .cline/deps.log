@@ -1,0 +1,3 @@
+﻿=== CMD: npm install prisma @prisma/client bcryptjs zod lucide-react clsx tailwind-merge ===
+npm warn ERESOLVE overriding peer dependency
+=== EXIT: -1 (elapsed 676.1s) ===

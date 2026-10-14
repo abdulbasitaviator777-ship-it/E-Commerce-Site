@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * NovaStore design system
+ * Neutral surfaces, a single indigo accent, consistent radius/shadow.
+ * Light + dark themes driven by CSS variables and a `.dark` class.
+ * ------------------------------------------------------------------ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f6f7f9;
+  --foreground: #18181b;
+  --muted: #71717a;
+  --border: #e4e4e7;
+  --accent: #4f46e5; /* indigo-600 */
+  --accent-hover: #4338ca;
+  --accent-foreground: #ffffff;
+  --accent-soft: #eef2ff;
+  --ring: #a5b4fc;
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+  --warning: #d97706;
+  --warning-soft: #fef3c7;
+  --danger: #dc2626;
+  --danger-soft: #fee2e2;
+  --star: #f59e0b;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0b0b0f;
+  --surface: #141419;
+  --surface-muted: #1b1b22;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: #2a2a33;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --accent-foreground: #ffffff;
+  --accent-soft: #1e1b4b;
+  --ring: #4f46e5;
+  --success: #22c55e;
+  --success-soft: #052e16;
+  --warning: #f59e0b;
+  --warning-soft: #2a1c05;
+  --danger: #ef4444;
+  --danger-soft: #2a0d0d;
+  --star: #fbbf24;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-star: var(--star);
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Consistent focus ring across interactive elements. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Hide number input spinners for a cleaner look. */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Subtle skeleton shimmer for loading states. */
+@keyframes ns-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+.skeleton::after {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  animation: ns-shimmer 1.5s infinite;
+  content: "";
+}
+.dark .skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+}
+

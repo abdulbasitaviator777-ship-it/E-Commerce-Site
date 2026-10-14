@@ -1,0 +1,8 @@
+﻿node procs:
+prisma = True
+zod = True
+lucide-react = True
+bcryptjs = True
+clsx = True
+tailwind-merge = True
+@prisma/client = True

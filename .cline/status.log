@@ -1,0 +1,11 @@
+﻿=== CMD: node --version && npm ls prisma @prisma/client bcryptjs zod lucide-react clsx tailwind-merge --depth=0 2>nul ===
+v24.21.0
+store@0.1.0 F:\VScode\store
+Γö£ΓöÇΓöÇ @prisma/client@7.10.0 extraneous
+Γö£ΓöÇΓöÇ bcryptjs@3.0.3 extraneous
+Γö£ΓöÇΓöÇ clsx@2.1.1 extraneous
+Γö£ΓöÇΓöÇ lucide-react@1.56.0 extraneous
+Γö£ΓöÇΓöÇ prisma@8.0.0-rc.22 extraneous
+ΓööΓöÇΓöÇ tailwind-merge@3.7.0 extraneous
+
+=== EXIT: 0 (elapsed 27s) ===

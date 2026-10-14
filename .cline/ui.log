@@ -1,0 +1,7 @@
+=== ui deps === 
+
+added 48 packages in 52s
+INSTALL_EXIT=0 
+npm error code ENOMATCH
+npm error No installed packages match: @radix-ui/rc-tooltip
+npm error A complete log of this run can be found in: C:\Users\Nova\AppData\Local\npm-cache\_logs\2026-10-13T15_11_27_631Z-debug-0.log

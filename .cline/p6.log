@@ -1,0 +1,31 @@
+=== downgrade prisma to v6 === 
+
+added 6 packages, removed 95 packages, and changed 16 packages in 2m
+npm warn install-scripts 3 packages have install scripts not yet covered by allowScripts:
+npm warn install-scripts   @prisma/client@6.19.3 (postinstall: node scripts/postinstall.js)
+npm warn install-scripts   prisma@6.19.3 (preinstall: node scripts/preinstall-entry.js)
+npm warn install-scripts   @prisma/engines@6.19.3 (postinstall: node scripts/postinstall.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+INSTALL_EXIT=0 
+Approved prisma:
+  removed-stale prisma@7.10.0
+  added prisma@6.19.3
+Approved @prisma/engines:
+  removed-stale @prisma/engines@7.10.0
+  added @prisma/engines@6.19.3
+Approved @prisma/client:
+  removed-stale @prisma/client@7.10.0
+  added @prisma/client@6.19.3
+APPROVE_EXIT=0 
+=== prisma generate === 
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to .\node_modules\@prisma\client in 666ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+GEN_EXIT=0 
